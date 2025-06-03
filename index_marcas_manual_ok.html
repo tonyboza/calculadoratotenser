@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Profesional de Vinilo para Autos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .brand-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .brand-logo {
+            height: 60px;
+            margin: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        select:focus, input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            display: none;
+        }
+        .result h2 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+        .highlight {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .note {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffd600;
+            margin-top: 20px;
+        }
+        .details {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .details th, .details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .details th {
+            background-color: #f2f2f2;
+        }
+        .details tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #e7f3fe !important;
+        }
+        .logos-footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .logo-footer {
+            height: 50px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .logo-footer:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand-logos">
+            <img src="oracal.png" alt="Oracal" class="brand-logo">
+            <img src="totenser.jpg" alt="Totenser" class="brand-logo">
+        </div>
+        
+        <h1>Calculadora Profesional de Vinilo para Autos</h1>
+        
+        <div class="form-group">
+            <label for="marca">Selecciona la marca:</label>
+            <select id="marca">
+<option value="">-- Selecciona --</option>
+<option value="Abarth">Abarth</option>
+<option value="Alfa">Alfa</option>
+<option value="Audi">Audi</option>
+<option value="Bmw">Bmw</option>
+<option value="Citroen">Citroen</option>
+<option value="Citroën">Citroën</option>
+<option value="Cupra">Cupra</option>
+<option value="Dacia">Dacia</option>
+<option value="Ds">Ds</option>
+<option value="Ferrari">Ferrari</option>
+<option value="Fiat">Fiat</option>
+<option value="Ford">Ford</option>
+<option value="Honda">Honda</option>
+<option value="Hyundai">Hyundai</option>
+<option value="Jaguar">Jaguar</option>
+<option value="Jeep">Jeep</option>
+<option value="Kia">Kia</option>
+<option value="Land">Land</option>
+<option value="Lexus">Lexus</option>
+<option value="Maserati">Maserati</option>
+<option value="Mclaren">Mclaren</option>
+<option value="Mercedes">Mercedes</option>
+<option value="Mg">Mg</option>
+<option value="Mini">Mini</option>
+<option value="Mitsubishi">Mitsubishi</option>
+<option value="Nissan">Nissan</option>
+<option value="Omoda">Omoda</option>
+<option value="Opel">Opel</option>
+<option value="Peugeot">Peugeot</option>
+<option value="Porsche">Porsche</option>
+<option value="Range">Range</option>
+<option value="Range Rover">Range Rover</option>
+<option value="Renault">Renault</option>
+<option value="Rolls-Royce">Rolls-Royce</option>
+<option value="Seat">Seat</option>
+<option value="Skoda">Skoda</option>
+<option value="Smart">Smart</option>
+<option value="Smat">Smat</option>
+<option value="Subaru">Subaru</option>
+<option value="Suzuki">Suzuki</option>
+<option value="Tesla">Tesla</option>
+<option value="Toyota">Toyota</option>
+<option value="Volkswagen">Volkswagen</option>
+<option value="Volvo">Volvo</option>
+</select>
+        </div>
+        
+        <div class="form-group">
+            <label for="modelo">Selecciona el modelo:</label>
+            <select id="modelo" disabled>
+                <option value="">-- Primero selecciona una marca --</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="ancho">Ancho del vinilo (metros):</label>
+            <input type="number" id="ancho" step="0.01" min="1.2" max="1.6" value="1.52" placeholder="Ej: 1.52">
+        </div>
+        
+        <button id="calcular">Calcular Vinilo Necesario</button>
+        
+        <div class="result" id="resultado">
+            <h2>Resultado para <span id="marca-modelo"></span>:</h2>
+            
+            <table class="details" id="detalles-corte">
+                <thead>
+                    <tr>
+                        <th>Parte del vehículo</th>
+                        <th>Metros lineales</th>
+                        <th>Ancho utilizado</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody id="detalles-body">
+                    <!-- Aquí se insertarán las filas dinámicamente -->
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong id="total-metros">0</strong> m</td>
+                        <td colspan="2">(de un rollo de <span id="ancho-vinilo">1.52</span>m de ancho)</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div class="note">
+                <h3>Consideraciones técnicas:</h3>
+                <ul>
+                    <li>Los valores incluyen un 10% adicional para solapes y ajustes</li>
+                    <li>Para vehículos con muchas curvas o detalles, añadir un 5-10% extra</li>
+                    <li>El ancho estándar del vinilo es 1.52m (60 pulgadas)</li>
+                    <li id="nota-especifica"></li>
+                </ul>
+                <p class="highlight">Total recomendado con margen: <span id="total-recomendado">0</span> metros lineales</p>
+            </div>
+        </div>
+        
+        <div class="logos-footer">
+            <img src="oracal.png" alt="Oracal" class="logo-footer">
+            <img src="totenser.jpg" alt="Totenser" class="logo-footer">
+        </div>
+    </div>
+
+    <script>
+        // Base de datos completa de modelos con todas las marcas originales
+        const modelosDetallados = {
+    "Abarth": {
+        "500": calcularPartesStandard(14),
+        "500C": calcularPartesStandard(14),
+        "600": calcularPartesStandard(14),
+    },
+    "Alfa": {
+        "Romeo Giulia": calcularPartesStandard(14),
+        "Romeo Junior": calcularPartesStandard(14),
+        "Romeo Stelvio": calcularPartesStandard(14),
+        "Romeo Tonale": calcularPartesStandard(14),
+        "Romeo Milano": calcularPartesStandard(14),
+    },
+    "Audi": {
+        "A1": calcularPartesStandard(14),
+        "A3": calcularPartesStandard(14),
+        "A4": calcularPartesStandard(14),
+        "A4 Allroad Quattro": calcularPartesSUV(14),
+        "A5": calcularPartesStandard(14),
+        "A6": calcularPartesStandard(14),
+        "A6 Allroad Quattro": calcularPartesSUV(14),
+        "A6 E-Tron": calcularPartesStandard(14),
+        "A7": calcularPartesStandard(14),
+        "A8": calcularPartesStandard(14),
+        "E-Tron Gt": calcularPartesDeportivo(14),
+        "Q2": calcularPartesSUV(14),
+        "Q3": calcularPartesSUV(14),
+        "Q3 Sportback": calcularPartesSUV(14),
+        "Q4 E-Tron": calcularPartesSUV(14),
+        "Q4 Sportback E-Tron": calcularPartesSUV(14),
+        "Q5": calcularPartesSUV(14),
+        "Q5 Sportback": calcularPartesSUV(14),
+        "Q6 E-Tron": calcularPartesSUV(14),
+        "Q6 Sportback E-Tron": calcularPartesSUV(14),
+        "Q7": calcularPartesSUV(14),
+        "Q8": calcularPartesSUV(14),
+        "Q8 E-Tron": calcularPartesSUV(14),
+        "Q8 Sportback E-Tron": calcularPartesSUV(14),
+        "R8": calcularPartesDeportivo(14),
+        "Tt": calcularPartesDeportivo(14),
+        "E-Tron": calcularPartesStandard(14),
+        "E-Tron Sportback": calcularPartesDeportivo(14),
+        "Audi A6 E-Tron": calcularPartesStandard(14),
+    },
+    "Bmw": {
+        "I4": calcularPartesStandard(14),
+        "I5": calcularPartesStandard(14),
+        "I7": calcularPartesStandard(14),
+        "Ix": calcularPartesSUV(14),
+        "Ix1": calcularPartesSUV(14),
+        "Ix2": calcularPartesSUV(14),
+        "Ix3": calcularPartesSUV(14),
+        "Serie 1": calcularPartesStandard(14),
+        "Serie 2": calcularPartesStandard(14),
+        "Serie 2 Active Tourer": calcularPartesStandard(14),
+        "Serie 3": calcularPartesStandard(14),
+        "Serie 4": calcularPartesStandard(14),
+        "Serie 5": calcularPartesStandard(14),
+        "Serie 7": calcularPartesStandard(14),
+        "Serie 8": calcularPartesStandard(14),
+        "X1": calcularPartesSUV(14),
+        "X2": calcularPartesSUV(14),
+        "X3": calcularPartesSUV(14),
+        "X4": calcularPartesSUV(14),
+        "X5": calcularPartesSUV(14),
+        "X6": calcularPartesSUV(14),
+        "X7": calcularPartesSUV(14),
+        "Xm": calcularPartesSUV(14),
+        "Z4": calcularPartesDeportivo(14),
+        "I3": calcularPartesStandard(14),
+        "Serie 2 Gran Tourer": calcularPartesDeportivo(14),
+        "Serie 6": calcularPartesStandard(14),
+        "I1": calcularPartesStandard(14),
+    },
+    "Citroen": {
+        "Citroën Ami": calcularPartesStandard(14),
+        "Citroën Berlingo": calcularPartesFurgoneta(14),
+        "Citroën C3": calcularPartesStandard(14),
+        "Citroën C3 Aircross": calcularPartesSUV(14),
+        "Citroën C3 Origin": calcularPartesStandard(14),
+        "Citroën C4": calcularPartesStandard(14),
+        "Citroën C4 X": calcularPartesSUV(14),
+        "Citroën C5 Aircross": calcularPartesSUV(14),
+        "Citroën C5 X": calcularPartesSUV(14),
+        "Citroën Ë-Berlingo": calcularPartesFurgoneta(14),
+        "Citroën Ë-C3": calcularPartesStandard(14),
+        "Citroën Ë-C3 Aircross": calcularPartesSUV(14),
+        "Citroën Ë-C4": calcularPartesStandard(14),
+        "Citroën Ë-C4 X": calcularPartesSUV(14),
+        "Citroën Ë-Spacetourer": calcularPartesFurgoneta(14),
+        "Citroën Holidays": calcularPartesStandard(14),
+        "Citroën Spacetourer": calcularPartesFurgoneta(14),
+        "Citroën Grand C4 Spacetourer": calcularPartesDeportivo(14),
+        "Citroën Ë-C5 Aircross": calcularPartesSUV(14),
+    },
+    "Citroën": {
+        "Ami": calcularPartesStandard(14),
+        "Berlingo": calcularPartesFurgoneta(14),
+        "C3": calcularPartesStandard(14),
+        "C3 Aircross": calcularPartesSUV(14),
+        "C3 Origin": calcularPartesStandard(14),
+        "C4": calcularPartesStandard(14),
+        "C4 X": calcularPartesSUV(14),
+        "C5 Aircross": calcularPartesSUV(14),
+        "C5 X": calcularPartesSUV(14),
+        "Ë-Berlingo": calcularPartesFurgoneta(14),
+        "Ë-C3": calcularPartesStandard(14),
+        "Ë-C3 Aircross": calcularPartesSUV(14),
+        "Ë-C4": calcularPartesStandard(14),
+        "Ë-C4 X": calcularPartesSUV(14),
+        "Ë-Spacetourer": calcularPartesFurgoneta(14),
+        "Holidays": calcularPartesStandard(14),
+        "Spacetourer": calcularPartesFurgoneta(14),
+        "Grand C4 Spacetourer": calcularPartesDeportivo(14),
+        "Ë-C5 Aircross": calcularPartesSUV(14),
+    },
+    "Cupra": {
+        "Ateca": calcularPartesStandard(14),
+        "Born": calcularPartesStandard(14),
+        "Formentor": calcularPartesStandard(14),
+        "León": calcularPartesStandard(14),
+        "Tavascan": calcularPartesStandard(14),
+        "Terramar": calcularPartesStandard(14),
+        "Raval": calcularPartesStandard(14),
+    },
+    "Dacia": {
+        "Bigster": calcularPartesStandard(14),
+        "Duster": calcularPartesStandard(14),
+        "Jogger": calcularPartesStandard(14),
+        "Sandero": calcularPartesStandard(14),
+        "Spring": calcularPartesStandard(14),
+        "Lodgy": calcularPartesStandard(14),
+        "Logan": calcularPartesStandard(14),
+    },
+    "Ds": {
+        "3": calcularPartesStandard(14),
+        "4": calcularPartesStandard(14),
+        "7": calcularPartesStandard(14),
+        "9": calcularPartesStandard(14),
+        "Nº8": calcularPartesStandard(14),
+        "3 Crossback": calcularPartesSUV(14),
+        "Ds Nº8": calcularPartesStandard(14),
+    },
+    "Ferrari": {
+        "12Cilindri": calcularPartesStandard(14),
+        "296": calcularPartesStandard(14),
+        "F80": calcularPartesStandard(14),
+        "Purosangue": calcularPartesStandard(14),
+        "Roma": calcularPartesStandard(14),
+        "Sf90": calcularPartesDeportivo(14),
+        "812 Gts": calcularPartesDeportivo(14),
+        "Ferrari 12Cilindri": calcularPartesStandard(14),
+    },
+    "Fiat": {
+        "500": calcularPartesStandard(14),
+        "500C": calcularPartesStandard(14),
+        "500X": calcularPartesSUV(14),
+        "600": calcularPartesStandard(14),
+        "Doblò": calcularPartesFurgoneta(14),
+        "E-Doblò": calcularPartesFurgoneta(14),
+        "E-Ulysse": calcularPartesStandard(14),
+        "Grande Panda": calcularPartesDeportivo(14),
+        "Panda": calcularPartesStandard(14),
+        "Tipo": calcularPartesStandard(14),
+        "Topolino": calcularPartesStandard(14),
+        "Ulysse": calcularPartesStandard(14),
+        "500L": calcularPartesStandard(14),
+        "Multipla": calcularPartesStandard(14),
+        "Pandissima": calcularPartesStandard(14),
+    },
+    "Ford": {
+        "Bronco": calcularPartesStandard(14),
+        "Capri": calcularPartesStandard(14),
+        "Explorer": calcularPartesSUV(14),
+        "Explorer Ev": calcularPartesSUV(14),
+        "Fiesta": calcularPartesStandard(14),
+        "Focus": calcularPartesStandard(14),
+        "Grand Tourneo Connect": calcularPartesDeportivo(14),
+        "Kuga": calcularPartesSUV(14),
+        "Mustang": calcularPartesStandard(14),
+        "Mustang Mach-E": calcularPartesStandard(14),
+        "Puma": calcularPartesStandard(14),
+        "Tourneo Connect": calcularPartesFurgoneta(14),
+        "Tourneo Courier": calcularPartesFurgoneta(14),
+        "Tourneo Custom": calcularPartesFurgoneta(14),
+        "Mondeo": calcularPartesStandard(14),
+        "Galaxy": calcularPartesSUV(14),
+        "S-Max": calcularPartesSUV(14),
+        "Ecosport": calcularPartesDeportivo(14),
+    },
+    "Honda": {
+        "Civic": calcularPartesStandard(14),
+        "Cr-V": calcularPartesStandard(14),
+        "E:Ny1": calcularPartesStandard(14),
+        "Hr-V": calcularPartesStandard(14),
+        "Jazz": calcularPartesStandard(14),
+        "Zr-V": calcularPartesStandard(14),
+        "E": calcularPartesStandard(14),
+        "Prelude": calcularPartesStandard(14),
+    },
+    "Hyundai": {
+        "Bayon": calcularPartesStandard(14),
+        "I10": calcularPartesStandard(14),
+        "I20": calcularPartesStandard(14),
+        "I30": calcularPartesStandard(14),
+        "Inster": calcularPartesStandard(14),
+        "Ioniq 5": calcularPartesSUV(14),
+        "Ioniq 6": calcularPartesSUV(14),
+        "Kona": calcularPartesStandard(14),
+        "Nexo": calcularPartesSUV(14),
+        "Santa Fe": calcularPartesStandard(14),
+        "Staria": calcularPartesStandard(14),
+        "Tucson": calcularPartesSUV(14),
+        "Ioniq": calcularPartesSUV(14),
+        "Ioniq 9": calcularPartesSUV(14),
+    },
+    "Jaguar": {
+        "E-Pace": calcularPartesStandard(14),
+        "F-Pace": calcularPartesStandard(14),
+        "F-Type": calcularPartesDeportivo(14),
+        "I-Pace": calcularPartesStandard(14),
+        "Xe": calcularPartesSUV(14),
+        "Xf": calcularPartesSUV(14),
+    },
+    "Jeep": {
+        "Avenger": calcularPartesStandard(14),
+        "Compass": calcularPartesStandard(14),
+        "Grand Cherokee": calcularPartesSUV(14),
+        "Renegade": calcularPartesStandard(14),
+        "Wrangler": calcularPartesSUV(14),
+        "Recon": calcularPartesStandard(14),
+        "Wagoneer S": calcularPartesStandard(14),
+    },
+    "Kia": {
+        "Ceed": calcularPartesStandard(14),
+        "Ceed Tourer": calcularPartesStandard(14),
+        "E-Niro": calcularPartesStandard(14),
+        "E-Soul": calcularPartesStandard(14),
+        "Ev3": calcularPartesStandard(14),
+        "Ev6": calcularPartesStandard(14),
+        "Ev9": calcularPartesStandard(14),
+        "Niro": calcularPartesStandard(14),
+        "Picanto": calcularPartesStandard(14),
+        "Proceed": calcularPartesStandard(14),
+        "Pv5": calcularPartesStandard(14),
+        "Rio": calcularPartesStandard(14),
+        "Sorento": calcularPartesStandard(14),
+        "Sportage": calcularPartesSUV(14),
+        "Stonic": calcularPartesStandard(14),
+        "Xceed": calcularPartesSUV(14),
+        "Stinger": calcularPartesStandard(14),
+        "Ev2": calcularPartesStandard(14),
+        "Ev4": calcularPartesStandard(14),
+        "Ev5": calcularPartesStandard(14),
+    },
+    "Land": {
+        "Rover Defender": calcularPartesSUV(14),
+        "Rover Discovery": calcularPartesSUV(14),
+        "Rover Discovery Sport": calcularPartesSUV(14),
+    },
+    "Lexus": {
+        "Es": calcularPartesStandard(14),
+        "Lbx": calcularPartesSUV(14),
+        "Lc": calcularPartesStandard(14),
+        "Lm": calcularPartesStandard(14),
+        "Ls": calcularPartesStandard(14),
+        "Nx": calcularPartesSUV(14),
+        "Rx": calcularPartesSUV(14),
+        "Rz": calcularPartesStandard(14),
+        "Ux": calcularPartesSUV(14),
+    },
+    "Maserati": {
+        "Ghibli": calcularPartesStandard(14),
+        "Grancabrio": calcularPartesDeportivo(14),
+        "Granturismo": calcularPartesDeportivo(14),
+        "Grecale": calcularPartesDeportivo(14),
+        "Levante": calcularPartesStandard(14),
+        "Mc20": calcularPartesStandard(14),
+        "Quattroporte": calcularPartesSUV(14),
+    },
+    "Mclaren": {
+        "750S": calcularPartesStandard(14),
+        "Artura": calcularPartesStandard(14),
+    },
+    "Mercedes": {
+        "Amg Gt": calcularPartesDeportivo(14),
+        "Amg Gt 4-Puertas Coupé": calcularPartesDeportivo(14),
+        "Amg Gt Coupé": calcularPartesDeportivo(14),
+        "Amg Sl": calcularPartesDeportivo(14),
+        "Citan": calcularPartesStandard(14),
+        "Clase A": calcularPartesStandard(14),
+        "Clase B": calcularPartesStandard(14),
+        "Clase C": calcularPartesStandard(14),
+        "Cla": calcularPartesStandard(14),
+        "Cls": calcularPartesStandard(14),
+        "Clase E": calcularPartesStandard(14),
+        "Clase G": calcularPartesStandard(14),
+        "Gla": calcularPartesSUV(14),
+        "Glb": calcularPartesSUV(14),
+        "Glc": calcularPartesSUV(14),
+        "Glc Coupé": calcularPartesSUV(14),
+        "Gle": calcularPartesSUV(14),
+        "Gle Coupé": calcularPartesSUV(14),
+        "Gls": calcularPartesSUV(14),
+        "Clase S": calcularPartesStandard(14),
+        "Clase T": calcularPartesStandard(14),
+        "Clase V": calcularPartesStandard(14),
+        "Cle": calcularPartesStandard(14),
+        "Eqa": calcularPartesSUV(14),
+        "Eqb": calcularPartesSUV(14),
+        "Eqe": calcularPartesSUV(14),
+        "Eqe Suv": calcularPartesSUV(14),
+        "Eqs": calcularPartesSUV(14),
+        "Eqs Suv": calcularPartesSUV(14),
+        "Eqt": calcularPartesSUV(14),
+        "Eqv": calcularPartesSUV(14),
+        "Maybach Sl": calcularPartesDeportivo(14),
+        "Vito": calcularPartesStandard(14),
+        "Eqc": calcularPartesSUV(14),
+        "Eqg": calcularPartesSUV(14),
+        "Mercedes Clase S": calcularPartesStandard(14),
+    },
+    "Mg": {
+        "Cyberster": calcularPartesStandard(14),
+        "Ehs": calcularPartesStandard(14),
+        "Hs": calcularPartesStandard(14),
+        "Marvel R": calcularPartesStandard(14),
+        "Hybrid+": calcularPartesStandard(14),
+        "Mg4": calcularPartesStandard(14),
+        "Mg5": calcularPartesStandard(14),
+        "Ev": calcularPartesStandard(14),
+        "Zs": calcularPartesStandard(14),
+        "Zs Ev": calcularPartesStandard(14),
+        "Zs Hybrid+": calcularPartesStandard(14),
+    },
+    "Mini": {
+        "Aceman": calcularPartesStandard(14),
+        "Clubman": calcularPartesStandard(14),
+        "Cooper": calcularPartesStandard(14),
+        "Countryman": calcularPartesStandard(14),
+        "Mini": calcularPartesStandard(14),
+    },
+    "Mitsubishi": {
+        "Asx": calcularPartesSUV(14),
+        "Colt": calcularPartesStandard(14),
+        "Eclipse Cross": calcularPartesSUV(14),
+        "Outlander": calcularPartesStandard(14),
+        "Space Star": calcularPartesStandard(14),
+        "Grandis": calcularPartesDeportivo(14),
+    },
+    "Nissan": {
+        "Ariya": calcularPartesStandard(14),
+        "Juke": calcularPartesStandard(14),
+        "Leaf": calcularPartesStandard(14),
+        "Primastar": calcularPartesStandard(14),
+        "Qashqai": calcularPartesSUV(14),
+        "Townstar": calcularPartesStandard(14),
+        "X-Trail": calcularPartesSUV(14),
+        "Micra": calcularPartesStandard(14),
+    },
+    "Omoda": {
+        "5": calcularPartesStandard(14),
+        "5 Ev": calcularPartesStandard(14),
+        "9": calcularPartesStandard(14),
+        "E5": calcularPartesStandard(14),
+        "7": calcularPartesStandard(14),
+    },
+    "Opel": {
+        "Astra": calcularPartesStandard(14),
+        "Astra Electric": calcularPartesStandard(14),
+        "Astra Phev": calcularPartesStandard(14),
+        "Combo": calcularPartesFurgoneta(14),
+        "Combo-E Life": calcularPartesFurgoneta(14),
+        "Combo Electric": calcularPartesFurgoneta(14),
+        "Corsa": calcularPartesStandard(14),
+        "Corsa Electric": calcularPartesStandard(14),
+        "Crossland": calcularPartesSUV(14),
+        "Frontera": calcularPartesStandard(14),
+        "Frontera Electric": calcularPartesStandard(14),
+        "Grandland": calcularPartesDeportivo(14),
+        "Grandland Phev": calcularPartesDeportivo(14),
+        "Mokka": calcularPartesStandard(14),
+        "Mokka-E": calcularPartesStandard(14),
+        "Zafira": calcularPartesFurgoneta(14),
+        "Zafira-E Life": calcularPartesFurgoneta(14),
+        "Zafira Electric": calcularPartesFurgoneta(14),
+        "Insignia": calcularPartesStandard(14),
+        "Zafira Life": calcularPartesFurgoneta(14),
+        "Opel Astra": calcularPartesStandard(14),
+        "Opel Astra Electric": calcularPartesStandard(14),
+        "Opel Astra Phev": calcularPartesStandard(14),
+        "Opel Crossland": calcularPartesSUV(14),
+        "Opel Frontera": calcularPartesStandard(14),
+        "Opel Frontera Electric": calcularPartesStandard(14),
+        "Opel Mokka": calcularPartesStandard(14),
+        "Opel Mokka-E": calcularPartesStandard(14),
+    },
+    "Peugeot": {
+        "2008": calcularPartesStandard(14),
+        "208": calcularPartesStandard(14),
+        "3008": calcularPartesSUV(14),
+        "3008 Hybrid": calcularPartesSUV(14),
+        "3008 Plug-In Hybrid": calcularPartesSUV(14),
+        "308": calcularPartesStandard(14),
+        "408": calcularPartesStandard(14),
+        "5008": calcularPartesSUV(14),
+        "5008 Hybrid": calcularPartesSUV(14),
+        "5008 Plug-In Hybrid": calcularPartesSUV(14),
+        "508": calcularPartesStandard(14),
+        "508 Hybrid": calcularPartesStandard(14),
+        "E-2008": calcularPartesStandard(14),
+        "E-208": calcularPartesStandard(14),
+        "E-3008": calcularPartesSUV(14),
+        "E-308": calcularPartesStandard(14),
+        "E-408": calcularPartesStandard(14),
+        "E-5008": calcularPartesSUV(14),
+        "E-Rifter": calcularPartesStandard(14),
+        "E-Traveller": calcularPartesStandard(14),
+        "Rifter": calcularPartesStandard(14),
+        "Traveller": calcularPartesStandard(14),
+        "1008": calcularPartesStandard(14),
+    },
+    "Porsche": {
+        "718": calcularPartesDeportivo(14),
+        "911": calcularPartesDeportivo(14),
+        "Cayenne": calcularPartesStandard(14),
+        "Cayenne Coupé": calcularPartesStandard(14),
+        "Macan": calcularPartesStandard(14),
+        "Panamera": calcularPartesStandard(14),
+        "Taycan": calcularPartesStandard(14),
+    },
+    "Range": {
+        "Rover": calcularPartesSUV(14),
+        "Rover Evoque": calcularPartesSUV(14),
+        "Rover Sport": calcularPartesSUV(14),
+        "Rover Velar": calcularPartesSUV(14),
+    },
+    "Range Rover": {
+        "Range Rover": calcularPartesSUV(14),
+        "Range Rover Sport": calcularPartesSUV(14),
+    },
+    "Renault": {
+        "4 E-Tech": calcularPartesStandard(14),
+        "5": calcularPartesStandard(14),
+        "Arkana": calcularPartesStandard(14),
+        "Austral": calcularPartesStandard(14),
+        "Captur": calcularPartesSUV(14),
+        "Clio": calcularPartesStandard(14),
+        "Espace": calcularPartesStandard(14),
+        "Grand Kangoo Combi": calcularPartesDeportivo(14),
+        "Kangoo Combi": calcularPartesFurgoneta(14),
+        "Kangoo Combi E-Tech": calcularPartesFurgoneta(14),
+        "Mégane": calcularPartesStandard(14),
+        "Megane E-Tech": calcularPartesStandard(14),
+        "Rafale": calcularPartesStandard(14),
+        "Scenic E-Tech": calcularPartesStandard(14),
+        "Symbioz": calcularPartesStandard(14),
+        "Trafic": calcularPartesFurgoneta(14),
+        "Twingo E-Tech": calcularPartesStandard(14),
+        "Zoe": calcularPartesStandard(14),
+        "Scenic": calcularPartesStandard(14),
+        "Kadjar": calcularPartesSUV(14),
+        "Grand Scénic": calcularPartesDeportivo(14),
+        "Twingo": calcularPartesStandard(14),
+        "Koleos": calcularPartesStandard(14),
+    },
+    "Rolls-Royce": {
+        "Cullinan": calcularPartesStandard(14),
+        "Ghost": calcularPartesStandard(14),
+        "Phantom": calcularPartesStandard(14),
+        "Spectre": calcularPartesStandard(14),
+        "Rolls-Royce Cullinan": calcularPartesStandard(14),
+    },
+    "Seat": {
+        "Arona": calcularPartesStandard(14),
+        "Ateca": calcularPartesStandard(14),
+        "Ibiza": calcularPartesStandard(14),
+        "León": calcularPartesStandard(14),
+        "Tarraco": calcularPartesSUV(14),
+        "Alhambra": calcularPartesStandard(14),
+    },
+    "Skoda": {
+        "Elroq": calcularPartesSUV(14),
+        "Enyaq": calcularPartesSUV(14),
+        "Enyaq Coupe": calcularPartesSUV(14),
+        "Fabia": calcularPartesStandard(14),
+        "Kamiq": calcularPartesSUV(14),
+        "Karoq": calcularPartesSUV(14),
+        "Kodiaq": calcularPartesSUV(14),
+        "Octavia": calcularPartesStandard(14),
+        "Scala": calcularPartesStandard(14),
+        "Superb": calcularPartesStandard(14),
+        "Epiq": calcularPartesSUV(14),
+    },
+    "Smart": {
+        "#1": calcularPartesStandard(14),
+        "#3": calcularPartesStandard(14),
+        "#5": calcularPartesStandard(14),
+        "Fortwo": calcularPartesStandard(14),
+    },
+    "Smat": {
+        "Smart #1": calcularPartesStandard(14),
+        "Smart #3": calcularPartesStandard(14),
+        "Smart #5": calcularPartesStandard(14),
+        "Smart Fortwo": calcularPartesStandard(14),
+    },
+    "Subaru": {
+        "Brz": calcularPartesStandard(14),
+        "Crosstrek": calcularPartesSUV(14),
+        "Forester": calcularPartesStandard(14),
+        "Impreza": calcularPartesStandard(14),
+        "Outback": calcularPartesStandard(14),
+        "Solterra": calcularPartesStandard(14),
+        "Xv": calcularPartesSUV(14),
+    },
+    "Suzuki": {
+        "Across": calcularPartesSUV(14),
+        "Ignis": calcularPartesStandard(14),
+        "S-Cross": calcularPartesSUV(14),
+        "Swace": calcularPartesStandard(14),
+        "Swift": calcularPartesStandard(14),
+        "Vitara": calcularPartesStandard(14),
+        "E Vitara": calcularPartesStandard(14),
+    },
+    "Tesla": {
+        "Model 3": calcularPartesStandard(14),
+        "Model S": calcularPartesStandard(14),
+        "Model X": calcularPartesSUV(14),
+        "Model Y": calcularPartesStandard(14),
+        "Cybertruck": calcularPartesStandard(14),
+        "Model 2": calcularPartesStandard(14),
+        "Roadster": calcularPartesDeportivo(14),
+    },
+    "Toyota": {
+        "Aygo X Cross": calcularPartesSUV(14),
+        "Bz4X": calcularPartesSUV(14),
+        "C-Hr": calcularPartesStandard(14),
+        "Camry": calcularPartesStandard(14),
+        "Corolla": calcularPartesStandard(14),
+        "Corolla Cross": calcularPartesSUV(14),
+        "Gr Supra": calcularPartesDeportivo(14),
+        "Gr Yaris": calcularPartesDeportivo(14),
+        "Gr86": calcularPartesDeportivo(14),
+        "Highlander": calcularPartesStandard(14),
+        "Land Cruiser": calcularPartesStandard(14),
+        "Mirai": calcularPartesStandard(14),
+        "Proace City Verso": calcularPartesStandard(14),
+        "Proace Verso": calcularPartesStandard(14),
+        "Rav4": calcularPartesStandard(14),
+        "Yaris": calcularPartesStandard(14),
+        "Yaris Cross": calcularPartesSUV(14),
+        "Aygo": calcularPartesStandard(14),
+        "Prius": calcularPartesStandard(14),
+        "Bz1": calcularPartesStandard(14),
+        "Bz3": calcularPartesDeportivo(14),
+        "C-Hr+": calcularPartesStandard(14),
+        "Urban Cruiser": calcularPartesStandard(14),
+    },
+    "Volkswagen": {
+        "Caddy": calcularPartesFurgoneta(14),
+        "California": calcularPartesStandard(14),
+        "Caravelle": calcularPartesStandard(14),
+        "Golf": calcularPartesStandard(14),
+        "Grand California": calcularPartesDeportivo(14),
+        "Id. Buzz": calcularPartesStandard(14),
+        "Id.3": calcularPartesStandard(14),
+        "Id.4": calcularPartesStandard(14),
+        "Id.5": calcularPartesStandard(14),
+        "Id.7": calcularPartesStandard(14),
+        "Multivan": calcularPartesStandard(14),
+        "Passat": calcularPartesStandard(14),
+        "Polo": calcularPartesStandard(14),
+        "T-Cross": calcularPartesSUV(14),
+        "T-Roc": calcularPartesStandard(14),
+        "Taigo": calcularPartesStandard(14),
+        "Tayron": calcularPartesStandard(14),
+        "Tiguan": calcularPartesSUV(14),
+        "Tiguan Allspace": calcularPartesSUV(14),
+        "Touareg": calcularPartesStandard(14),
+        "Touran": calcularPartesStandard(14),
+        "Arteon": calcularPartesStandard(14),
+        "Id.1": calcularPartesStandard(14),
+        "Id.2": calcularPartesStandard(14),
+    },
+    "Volvo": {
+        "C40": calcularPartesStandard(14),
+        "Ec40": calcularPartesStandard(14),
+        "Es90": calcularPartesStandard(14),
+        "Ex30": calcularPartesSUV(14),
+        "Ex40": calcularPartesSUV(14),
+        "Ex90": calcularPartesSUV(14),
+        "S60": calcularPartesStandard(14),
+        "S90": calcularPartesStandard(14),
+        "V60": calcularPartesStandard(14),
+        "V90": calcularPartesStandard(14),
+        "V90 Cross Country": calcularPartesSUV(14),
+        "Xc40": calcularPartesSUV(14),
+        "Xc60": calcularPartesSUV(14),
+        "Xc90": calcularPartesSUV(14),
+        "V60 Cross Country": calcularPartesSUV(14),
+        "Em90": calcularPartesStandard(14),
+        "Ex60": calcularPartesSUV(14),
+    },
+};
+
+        // Funciones para calcular partes estándar según tipo de vehículo
+        function calcularPartesStandard(totalBase) {
+            return {
+                "Capó": { metros: totalBase * 0.15, anchoUtilizado: 1.4 },
+                "Aletas delanteras": { metros: totalBase * 0.12, anchoUtilizado: 0.8, observaciones: "2 piezas (1 por lado)" },
+                "Puertas laterales": { metros: totalBase * 0.28, anchoUtilizado: 1.2, observaciones: "4 piezas (2 por lado)" },
+                "Techo": { metros: totalBase * 0.15, anchoUtilizado: 1.3 },
+                "Maletero": { metros: totalBase * 0.10, anchoUtilizado: 1.2 },
+                "Parachoques delantero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 },
+                "Parachoques trasero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 }
+            };
+        }
+
+        function calcularPartesSUV(totalBase) {
+            return {
+                "Capó": { metros: totalBase * 0.16, anchoUtilizado: 1.4 },
+                "Aletas delanteras": { metros: totalBase * 0.14, anchoUtilizado: 0.8, observaciones: "2 piezas (1 por lado)" },
+                "Puertas laterales": { metros: totalBase * 0.30, anchoUtilizado: 1.2, observaciones: "4 piezas (2 por lado)" },
+                "Techo": { metros: totalBase * 0.15, anchoUtilizado: 1.3 },
+                "Portón trasero": { metros: totalBase * 0.15, anchoUtilizado: 1.2 },
+                "Parachoques delantero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 },
+                "Parachoques trasero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 }
+            };
+        }
+
+        function calcularPartesDeportivo(totalBase) {
+            return {
+                "Capó": { metros: totalBase * 0.20, anchoUtilizado: 1.3 },
+                "Aletas delanteras": { metros: totalBase * 0.15, anchoUtilizado: 0.8, observaciones: "2 piezas (1 por lado)" },
+                "Puertas laterales": { metros: totalBase * 0.25, anchoUtilizado: 1.1, observaciones: "2 piezas" },
+                "Techo": { metros: totalBase * 0.15, anchoUtilizado: 1.2 },
+                "Maletero": { metros: totalBase * 0.15, anchoUtilizado: 1.1 },
+                "Parachoques delantero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 },
+                "Parachoques trasero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 }
+            };
+        }
+
+        function calcularPartesFurgoneta(totalBase) {
+            return {
+                "Capó": { metros: totalBase * 0.10, anchoUtilizado: 1.4 },
+                "Puertas laterales": { metros: totalBase * 0.40, anchoUtilizado: 1.2, observaciones: "3-4 piezas" },
+                "Techo": { metros: totalBase * 0.20, anchoUtilizado: 1.3 },
+                "Portón trasero": { metros: totalBase * 0.20, anchoUtilizado: 1.2 },
+                "Parachoques delantero": { metros: totalBase * 0.10, anchoUtilizado: 0.75 }
+            };
+        }
+
+        // Elementos del DOM
+        const marcaSelect = document.getElementById('marca');
+        const modeloSelect = document.getElementById('modelo');
+        const anchoInput = document.getElementById('ancho');
+        const calcularBtn = document.getElementById('calcular');
+        const resultadoDiv = document.getElementById('resultado');
+        const marcaModeloSpan = document.getElementById('marca-modelo');
+        const detallesBody = document.getElementById('detalles-body');
+        const totalMetrosSpan = document.getElementById('total-metros');
+        const totalRecomendadoSpan = document.getElementById('total-recomendado');
+        const anchoViniloSpan = document.getElementById('ancho-vinilo');
+        const notaEspecifica = document.getElementById('nota-especifica');
+
+        // Cargar modelos cuando se selecciona una marca
+        marcaSelect.addEventListener('change', function() {
+            const marca = this.value;
+            
+            modeloSelect.innerHTML = '<option value="">-- Selecciona un modelo --</option>';
+            modeloSelect.disabled = !marca;
+            
+            if (marca && modelosDetallados[marca]) {
+                Object.keys(modelosDetallados[marca]).forEach(modelo => {
+                    const option = document.createElement('option');
+                    option.value = modelo;
+                    option.textContent = modelo;
+                    modeloSelect.appendChild(option);
+                });
+            }
+        });
+
+        // Calcular vinilo necesario
+        calcularBtn.addEventListener('click', function() {
+            const marca = marcaSelect.value;
+            const modelo = modeloSelect.value;
+            const anchoVinilo = parseFloat(anchoInput.value) || 1.52;
+            
+            if (!marca || !modelo) {
+                alert('Por favor selecciona marca y modelo');
+                return;
+            }
+            
+            if (!modelosDetallados[marca] || !modelosDetallados[marca][modelo]) {
+                alert('Modelo no encontrado en la base de datos');
+                return;
+            }
+            
+            // Mostrar nombre del vehículo
+            marcaModeloSpan.textContent = `${marca} ${modelo}`;
+            anchoViniloSpan.textContent = anchoVinilo;
+            
+            // Limpiar tabla de detalles
+            detallesBody.innerHTML = '';
+            
+            // Calcular totales
+            let totalMetros = 0;
+            const partes = modelosDetallados[marca][modelo];
+            
+            // Procesar cada parte del vehículo
+            Object.keys(partes).forEach(parte => {
+                const detalle = partes[parte];
+                const metros = detalle.metros;
+                const anchoUtilizado = detalle.anchoUtilizado;
+                
+                // Ajustar metros si el ancho del vinilo es diferente al estándar
+                const metrosAjustados = metros * (1.52 / anchoVinilo);
+                totalMetros += metrosAjustados;
+                
+                // Crear fila en la tabla
+                const row = document.createElement('tr');
+                
+                const cellParte = document.createElement('td');
+                cellParte.textContent = parte;
+                
+                const cellMetros = document.createElement('td');
+                cellMetros.textContent = metrosAjustados.toFixed(2);
+                
+                const cellAncho = document.createElement('td');
+                cellAncho.textContent = anchoUtilizado + 'm';
+                
+                const cellObs = document.createElement('td');
+                cellObs.textContent = detalle.observaciones || '-';
+                
+                row.appendChild(cellParte);
+                row.appendChild(cellMetros);
+                row.appendChild(cellAncho);
+                row.appendChild(cellObs);
+                
+                detallesBody.appendChild(row);
+            });
+            
+            // Añadir margen de seguridad (10%)
+            const totalConMargen = totalMetros * 1.10;
+            
+            // Mostrar totales
+            totalMetrosSpan.textContent = totalMetros.toFixed(2);
+            totalRecomendadoSpan.textContent = totalConMargen.toFixed(2);
+            
+            // Nota específica según el vehículo
+            if (totalMetros > 22) {
+                notaEspecifica.textContent = "Vehículo grande: considerar comprar un 10% adicional para posibles errores en partes complejas.";
+            } else if (totalMetros > 16) {
+                notaEspecifica.textContent = "Vehículo mediano: el margen incluido debería ser suficiente, pero considerar detalles complejos.";
+            } else {
+                notaEspecifica.textContent = "Vehículo pequeño: con el margen incluido deberías tener suficiente material.";
+            }
+            
+            resultadoDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
