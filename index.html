@@ -868,6 +868,7 @@
         }
 
         function calcularPartesSUV(totalBase) {
+    totalBase = totalBase * 1.3; // Aplicar corrección del 30% para todos los SUV
             return {
                 "Capó": { metros: totalBase * 0.16, anchoUtilizado: 1.4 },
                 "Aletas delanteras": { metros: totalBase * 0.14, anchoUtilizado: 0.8, observaciones: "2 piezas (1 por lado)" },
